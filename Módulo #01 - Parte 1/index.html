@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React.js Ninja | Aula 01</title>
+</head>
+<body>
+  <h1>Começando o curso...</h1>
+  <div id="aula03"></div>
+  <div id="aula04"></div>
+  <div id="aula05"></div>
+  <div id="aula06"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <script>
+    var h1 = React.createElement('h1', null,
+      [React.createElement('span', null, React.createElement('i', null, 'Sou itálico')),
+      React.createElement('span', null, 'Sou só um span')])
+    ReactDOM.render(h1, document.getElementById('aula03'))
+    
+    var h2 = React.DOM.h2(null, 
+      [React.DOM.span(null, React.DOM.i(null, 'Sou itálico')),
+      React.DOM.span(null, 'Sou só um span')])
+    ReactDOM.render(h2, document.getElementById('aula04'))
+  </script>
+  <script type="text/babel">  
+    ReactDOM.render(<h3>Usando JSX</h3>, document.getElementById('aula05'))
+
+    var Title = React.createClass({
+      render: function(){
+        return (
+          <h3>
+            <span>Usando JSX com createClass</span>
+          </h3>
+        )
+      }
+    })
+    ReactDOM.render(<Title />, document.getElementById('aula06'))
+  </script>
+</body>
+</html>
